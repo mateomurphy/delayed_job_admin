@@ -1,6 +1,8 @@
 class DelayedJobsController < DelayedJobAdmin::Config.parent_controller_class
   unloadable
   
+  layout 'delayed_jobs'
+  
   def index
     @statistics = current_model.statistics
     @jobs       = current_model.all
